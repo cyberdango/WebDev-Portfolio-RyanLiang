@@ -1,10 +1,75 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Framework</title>
+    <meta name="description" content="Minimal portfolio framework with background, navigation, and large section frames.">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>My Portfolio</h1>
+    <div class="bg-grid" aria-hidden="true"></div>
+
+    <!-- Navigation Bar -->
+    <header class="site-header">
+        <nav class="nav container">
+            <a class="logo" href="#home">Portfolio UI</a>
+            <button class="nav-toggle" aria-label="Open navigation menu" aria-expanded="false">Menu</button>
+            <ul class="nav-links">
+                <li><a class="nav-link active" href="#home">Home</a></li>
+                <li><a class="nav-link" href="#about">About</a></li>
+                <li><a class="nav-link" href="#interests">Interests</a></li>
+                <li><a class="nav-link" href="#gallery">Gallery</a></li>
+                <li><a class="nav-link" href="#videos">Videos</a></li>
+                <li><a class="nav-link" href="#projects">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home Framework -->
+        <section id="home" class="section">
+            <div class="container">
+                <div class="panel big-frame reveal"></div>
+            </div>
+        </section>
+
+        <!-- About Framework -->
+        <section id="about" class="section">
+            <div class="container">
+                <div class="panel big-frame reveal"></div>
+            </div>
+        </section>
+
+        <!-- Interests Framework -->
+        <section id="interests" class="section">
+            <div class="container">
+                <div class="panel big-frame reveal"></div>
+            </div>
+        </section>
+
+        <!-- Gallery Framework -->
+        <section id="gallery" class="section">
+            <div class="container">
+                <div class="panel big-frame reveal"></div>
+            </div>
+        </section>
+
+        <!-- Videos Framework -->
+        <section id="videos" class="section">
+            <div class="container">
+                <div class="panel big-frame reveal"></div>
+            </div>
+        </section>
+
+        <!-- Projects Framework -->
+        <section id="projects" class="section">
+            <div class="container">
+                <div class="panel big-frame reveal"></div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
