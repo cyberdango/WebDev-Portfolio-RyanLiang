@@ -1,7 +1,7 @@
-// Basic framework startup log
+
 console.log("Section framework loaded.");
 
-// Mobile navigation toggle
+
 const navToggle = document.querySelector(".nav-toggle");
 const navLinks = document.querySelector(".nav-links");
 
@@ -12,7 +12,7 @@ if (navToggle && navLinks) {
     });
 }
 
-// Smooth scrolling for internal links
+
 document.querySelectorAll('a[href^="#"]').forEach((link) => {
     link.addEventListener("click", (event) => {
         const targetId = link.getAttribute("href");
@@ -27,7 +27,7 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
     });
 });
 
-// Active navigation highlight by scroll position
+
 const sectionIds = ["home", "about", "interests", "gallery", "videos", "projects"];
 const sections = sectionIds
     .map((id) => document.getElementById(id))
@@ -53,7 +53,7 @@ function updateActiveNav() {
 window.addEventListener("scroll", updateActiveNav);
 window.addEventListener("load", updateActiveNav);
 
-// Lightweight reveal effect
+
 const revealElements = document.querySelectorAll(".reveal");
 
 if ("IntersectionObserver" in window) {
