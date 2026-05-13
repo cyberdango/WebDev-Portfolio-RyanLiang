@@ -142,6 +142,43 @@ body {
 
 .big-frame {
     min-height: clamp(360px, 54vh, 620px);
+    padding: clamp(1rem, 2.2vw, 1.6rem);
+}
+
+.mini-grid {
+    display: grid;
+    gap: 0.9rem;
+    width: 100%;
+}
+
+.two-col {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.three-col {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.four-col {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.mini-box {
+    min-height: 88px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 140, 210, 0.4);
+    background: rgba(255, 255, 255, 0.06);
+    box-shadow: 0 0 16px rgba(255, 79, 163, 0.16);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-main);
+    font-family: "Chakra Petch", sans-serif;
+    letter-spacing: 0.03em;
+}
+
+.media-box {
+    min-height: 132px;
 }
 
 .reveal {
@@ -182,5 +219,21 @@ body {
 
     .big-frame {
         min-height: clamp(300px, 48vh, 460px);
+    }
+
+    .four-col {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .three-col {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 640px) {
+    .two-col,
+    .three-col,
+    .four-col {
+        grid-template-columns: 1fr;
     }
 }
