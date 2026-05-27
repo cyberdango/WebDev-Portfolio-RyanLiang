@@ -46,9 +46,6 @@ body {
     pointer-events: none;
 }
 
-/* =========================================
-   Navigation
-========================================= */
 .site-header {
     position: sticky;
     top: 0;
@@ -128,7 +125,7 @@ body {
 
 
 .section {
-    padding: 2.4rem 0 3.8rem;
+    padding: 2.8rem 0 3.8rem;
     scroll-margin-top: 86px;
 }
 
@@ -143,6 +140,103 @@ body {
 .big-frame {
     min-height: clamp(360px, 54vh, 620px);
     padding: clamp(1rem, 2.2vw, 1.6rem);
+}
+
+.section-title {
+    margin: 0 0 1rem;
+    font-family: "Chakra Petch", sans-serif;
+    font-size: clamp(1.05rem, 2.3vw, 1.2rem);
+    letter-spacing: 0.14em;
+    color: #ffe6f3;
+    text-shadow: 0 0 12px rgba(255, 79, 163, 0.4);
+}
+
+/* About section */
+.about-panel {
+    display: grid;
+    gap: 1rem;
+}
+
+.about-layout {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 1rem;
+    align-items: start;
+}
+
+.about-left,
+.about-info-group {
+    border: 1px solid rgba(255, 140, 210, 0.34);
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 0.9rem 1rem;
+}
+
+.about-right {
+    display: grid;
+    gap: 0.8rem;
+}
+
+.about-name {
+    margin: 0;
+    font-family: "Chakra Petch", sans-serif;
+    font-size: clamp(1.35rem, 3vw, 1.75rem);
+    letter-spacing: 0.03em;
+    color: #ffeafb;
+    text-shadow: 0 0 14px rgba(255, 79, 163, 0.38);
+}
+
+.about-subtitle {
+    margin: 0.45rem 0 0.8rem;
+    color: #e7cde0;
+    font-family: "Chakra Petch", sans-serif;
+    font-size: clamp(0.92rem, 2.1vw, 1.03rem);
+    letter-spacing: 0.03em;
+}
+
+.about-intro {
+    margin: 0 0 0.72rem;
+    color: var(--text-soft);
+    line-height: 1.58;
+    font-size: 0.98rem;
+}
+
+.about-intro:last-child {
+    margin-bottom: 0;
+}
+
+.about-heading {
+    margin: 0 0 0.5rem;
+    font-family: "Chakra Petch", sans-serif;
+    letter-spacing: 0.09em;
+    font-size: 0.92rem;
+    color: #ffe6f3;
+}
+
+.about-list {
+    margin: 0;
+    padding-left: 1.1rem;
+    color: var(--text-soft);
+    font-size: 0.92rem;
+    line-height: 1.5;
+}
+
+/* Interests section */
+.interests-panel {
+    display: grid;
+    gap: 1rem;
+}
+
+.interests-grid .mini-box,
+.featured-grid .mini-box {
+    text-align: center;
+    padding: 0.5rem;
+    line-height: 1.35;
+    min-height: 96px;
+}
+
+.featured-grid {
+    margin-top: 0.2rem;
 }
 
 .mini-grid {
@@ -221,12 +315,20 @@ body {
         min-height: clamp(300px, 48vh, 460px);
     }
 
+    .section {
+        padding: 2.2rem 0 3.2rem;
+    }
+
     .four-col {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .three-col {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .about-layout {
+        grid-template-columns: 1fr;
     }
 }
 

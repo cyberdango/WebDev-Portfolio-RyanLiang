@@ -4,6 +4,7 @@ console.log("Section framework loaded.");
 
 const navToggle = document.querySelector(".nav-toggle");
 const navLinks = document.querySelector(".nav-links");
+const header = document.querySelector(".site-header");
 
 if (navToggle && navLinks) {
     navToggle.addEventListener("click", () => {
@@ -20,7 +21,12 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
 
         if (target) {
             event.preventDefault();
-            target.scrollIntoView({ behavior: "smooth", block: "start" });
+            const headerOffset = header ? header.offsetHeight + 12 : 0;
+            const targetTop = target.getBoundingClientRect().top + window.scrollY - headerOffset;
+            window.scrollTo({
+                top: targetTop,
+                behavior: "smooth"
+            });
             navLinks?.classList.remove("open");
             navToggle?.setAttribute("aria-expanded", "false");
         }
@@ -28,7 +34,7 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
 });
 
 
-const sectionIds = ["home", "about", "interests", "gallery", "videos", "projects"];
+const sectionIds = ["home", "about", "interests", "images", "videos", "projects", "contact"];
 const sections = sectionIds
     .map((id) => document.getElementById(id))
     .filter((section) => section !== null);
@@ -36,10 +42,11 @@ const navItems = document.querySelectorAll(".nav-link");
 
 function updateActiveNav() {
     let activeId = "home";
+    const headerOffset = header ? header.offsetHeight + 28 : 120;
 
     sections.forEach((section) => {
         const rect = section.getBoundingClientRect();
-        if (rect.top <= 120 && rect.bottom > 120) {
+        if (rect.top <= headerOffset && rect.bottom > headerOffset) {
             activeId = section.id;
         }
     });

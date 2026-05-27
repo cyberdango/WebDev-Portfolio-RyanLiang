@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,7 +10,7 @@
 <body>
     <div class="bg-grid" aria-hidden="true"></div>
 
-    <!-- Navigation Bar -->
+
     <header class="site-header">
         <nav class="nav container">
             <a class="logo" href="#home">Ryan Liang</a>
@@ -19,55 +19,100 @@
                 <li><a class="nav-link active" href="#home">Home</a></li>
                 <li><a class="nav-link" href="#about">About</a></li>
                 <li><a class="nav-link" href="#interests">Interests</a></li>
-                <li><a class="nav-link" href="#gallery">Gallery</a></li>
+                <li><a class="nav-link" href="#images">Images</a></li>
                 <li><a class="nav-link" href="#videos">Videos</a></li>
                 <li><a class="nav-link" href="#projects">Projects</a></li>
+                <li><a class="nav-link" href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <!-- Home Framework -->
+  
         <section id="home" class="section">
             <div class="container">
-                <div class="panel big-frame reveal">
-                    <div class="mini-grid two-col">
-                        <div class="mini-box">Title</div>
-                        <div class="mini-box">Text</div>
-                    </div>
-                </div>
+                <div class="panel big-frame reveal"></div>
             </div>
         </section>
 
-        <!-- About Framework -->
+
         <section id="about" class="section">
             <div class="container">
-                <div class="panel big-frame reveal">
-                    <div class="mini-grid two-col">
-                        <div class="mini-box">Title</div>
-                        <div class="mini-box">Text</div>
+                <div class="panel big-frame reveal about-panel">
+                    <h2 class="section-title">About Me</h2>
+                    <div class="about-layout">
+                        <div class="about-left">
+                            <h3 class="about-name">Ryan Liang</h3>
+                            <p class="about-subtitle">Grade 12 Student • Creative Developer • Portfolio Website</p>
+                            <p class="about-intro">
+                                Hi, I'm Ryan Liang. I'm a Grade 12 student currently learning web development and modern UI.
+                                This website is my personal portfolio where I share my projects, interests, and learning journey.
+                            </p>
+                            <p class="about-intro">
+                                I enjoy exploring technology, creative media, and digital projects. I like building websites with
+                                futuristic styles and learning how code can create interactive experiences.
+                            </p>
+                        </div>
+
+                        <div class="about-right">
+                            <div class="about-info-group">
+                                <h3 class="about-heading">CURRENT LEARNING</h3>
+                                <ul class="about-list">
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                    <li>JavaScript</li>
+                                    <li>Responsive Web Design</li>
+                                    <li>UI / UX</li>
+                                </ul>
+                            </div>
+
+                            <div class="about-info-group">
+                                <h3 class="about-heading">GOALS</h3>
+                                <ul class="about-list">
+                                    <li>Improve my front-end coding skills</li>
+                                    <li>Build cleaner and more advanced websites</li>
+                                    <li>Learn more about AI workflows</li>
+                                    <li>Create interactive portfolio projects</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Interests Framework -->
+
         <section id="interests" class="section">
             <div class="container">
-                <div class="panel big-frame reveal">
-                    <div class="mini-grid three-col">
-                        <div class="mini-box">Card</div>
-                        <div class="mini-box">Card</div>
-                        <div class="mini-box">Card</div>
+                <div class="panel big-frame reveal interests-panel">
+                    <h2 class="section-title">My Interests</h2>
+
+                    <div class="mini-grid three-col interests-grid">
+                        <div class="mini-box">Web Development</div>
+                        <div class="mini-box">AI and Technology</div>
+                        <div class="mini-box">Photography</div>
+                        <div class="mini-box">Basketball</div>
+                        <div class="mini-box">Cyberpunk and Y2K Style</div>
+                        <div class="mini-box">Creative Coding</div>
+                        <div class="mini-box">Video Editing</div>
+                        <div class="mini-box">Card Magic</div>
+                        <div class="mini-box">Livestreaming and communicating with people who share the same interests</div>
+                    </div>
+
+                    <div class="mini-grid two-col featured-grid">
+                        <div class="mini-box">Photography &amp; Visual Media</div>
+                        <div class="mini-box">Learning Front-End Development</div>
+                        <div class="mini-box">Interested in AI and Technology</div>
+                        <div class="mini-box">Card Magic &amp; Online Communities</div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Gallery Framework -->
-        <section id="gallery" class="section">
+        <section id="images" class="section">
             <div class="container">
                 <div class="panel big-frame reveal">
+                    <h2 class="section-title">IMAGES</h2>
                     <div class="mini-grid four-col">
                         <div class="mini-box media-box">Image</div>
                         <div class="mini-box media-box">Image</div>
@@ -78,10 +123,10 @@
             </div>
         </section>
 
-        <!-- Videos Framework -->
         <section id="videos" class="section">
             <div class="container">
                 <div class="panel big-frame reveal">
+                    <h2 class="section-title">VIDEOS</h2>
                     <div class="mini-grid two-col">
                         <div class="mini-box media-box">Video</div>
                         <div class="mini-box media-box">Video</div>
@@ -90,14 +135,26 @@
             </div>
         </section>
 
-        <!-- Projects Framework -->
         <section id="projects" class="section">
             <div class="container">
                 <div class="panel big-frame reveal">
+                    <h2 class="section-title">PROJECTS</h2>
                     <div class="mini-grid three-col">
                         <div class="mini-box">Project</div>
                         <div class="mini-box">Project</div>
                         <div class="mini-box">Project</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="panel big-frame reveal">
+                    <h2 class="section-title">CONTACT</h2>
+                    <div class="mini-grid two-col">
+                        <div class="mini-box">Title</div>
+                        <div class="mini-box">Text</div>
                     </div>
                 </div>
             </div>
