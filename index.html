@@ -1,79 +1,145 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Framework</title>
-    <meta name="description" content="Minimal portfolio framework with background, navigation, and large section frames.">
+    <title>Ryan L. | Personal Portfolio</title>
+    <meta name="description" content="Ryan Liang's personal portfolio with about, images, video showcase, and contact sections.">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="intro-active">
     <div class="bg-grid" aria-hidden="true"></div>
 
+    <!-- Cinematic intro screen -->
+    <div class="intro-screen" id="intro-screen" role="dialog" aria-modal="true" aria-labelledby="intro-title" aria-describedby="intro-subtitle">
+        <div class="intro-stars" aria-hidden="true"></div>
+        <div class="intro-grid" aria-hidden="true"></div>
 
+        <div class="css-ship-wrap" aria-hidden="true">
+            <div class="ship-trail"></div>
+            <div class="css-ship">
+                <span class="ship-core"></span>
+                <span class="ship-wing left"></span>
+                <span class="ship-wing right"></span>
+                <span class="ship-engine"></span>
+            </div>
+        </div>
+
+        <div class="intro-content">
+            <h1 id="intro-title">Ryan L.</h1>
+            <p id="intro-subtitle">Building My Digital Identity</p>
+            <button class="intro-enter" id="intro-enter" type="button" aria-label="Enter Website" disabled>
+                Enter Website
+            </button>
+        </div>
+    </div>
+
+    <!-- Header and Navigation -->
     <header class="site-header">
-        <nav class="nav container">
-            <a class="logo" href="#home">Ryan Liang</a>
-            <button class="nav-toggle" aria-label="Open navigation menu" aria-expanded="false">Menu</button>
+        <nav class="nav container" aria-label="Main navigation">
+            <a class="logo" href="#home">Ryan L.</a>
+            <button class="nav-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">Menu</button>
             <ul class="nav-links">
                 <li><a class="nav-link active" href="#home">Home</a></li>
                 <li><a class="nav-link" href="#about">About</a></li>
-                <li><a class="nav-link" href="#interests">Interests</a></li>
                 <li><a class="nav-link" href="#images">Images</a></li>
-                <li><a class="nav-link" href="#videos">Videos</a></li>
-                <li><a class="nav-link" href="#projects">Projects</a></li>
+                <li><a class="nav-link" href="#video">Video</a></li>
                 <li><a class="nav-link" href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-  
-        <section id="home" class="section">
+        <!-- Home -->
+        <section id="home" class="section hero-section">
             <div class="container">
-                <div class="panel big-frame reveal"></div>
+                <div class="hero-panel reveal">
+                    <div class="hero-content">
+                        <div class="hero-mark" aria-hidden="true"></div>
+                        <h1 class="hero-title">Ryan L.</h1>
+                        <p class="hero-subtitle">Building My Digital Identity</p>
+                        <p class="hero-keywords">Code &bull; AI &bull; Photography &bull; Magic</p>
+                    </div>
+                </div>
             </div>
         </section>
 
-
+        <!-- About -->
         <section id="about" class="section">
             <div class="container">
-                <div class="panel big-frame reveal about-panel">
-                    <h2 class="section-title">About Me</h2>
+                <div class="section-shell reveal">
                     <div class="about-layout">
-                        <div class="about-left">
-                            <h3 class="about-name">Ryan Liang</h3>
-                            <p class="about-subtitle">Grade 12 Student • Creative Developer • Portfolio Website</p>
-                            <p class="about-intro">
-                                Hi, I'm Ryan Liang. I'm a Grade 12 student currently learning web development and modern UI.
-                                This website is my personal portfolio where I share my projects, interests, and learning journey.
+                        <div class="about-copy">
+                            <p class="section-label">01 / ABOUT</p>
+                            <h2>About Ryan</h2>
+                            <p class="section-subtitle">A creative student with many interests and stories.</p>
+                            <p>
+                                Hi, I'm Ryan Liang. I am a Grade 12 student with a strong interest in creativity,
+                                technology, and personal expression. I like trying different things because each hobby
+                                gives me a different way to understand the world.
                             </p>
-                            <p class="about-intro">
-                                I enjoy exploring technology, creative media, and digital projects. I like building websites with
-                                futuristic styles and learning how code can create interactive experiences.
+                            <p>
+                                Photography helps me record important moments. Card magic allows me to connect with
+                                people through surprise and performance. I also enjoy video editing, livestreaming,
+                                and sharing ideas with people who have similar interests.
+                            </p>
+                            <p class="personality-line">
+                                I am curious, creative, and always interested in learning new skills. I like turning
+                                my experiences into visual stories, digital projects, and meaningful memories.
                             </p>
                         </div>
 
-                        <div class="about-right">
-                            <div class="about-info-group">
-                                <h3 class="about-heading">CURRENT LEARNING</h3>
-                                <ul class="about-list">
-                                    <li>HTML</li>
-                                    <li>CSS</li>
-                                    <li>JavaScript</li>
-                                    <li>Responsive Web Design</li>
-                                    <li>UI / UX</li>
-                                </ul>
-                            </div>
+                        <div class="about-card-grid">
+                            <article class="glass-card">
+                                <h3>Creative Explorer</h3>
+                                <p>I enjoy trying different hobbies and using them to express my personality.</p>
+                            </article>
+                            <article class="glass-card">
+                                <h3>Photography</h3>
+                                <p>I like using photos to capture memories, emotions, and moments from my life.</p>
+                            </article>
+                            <article class="glass-card">
+                                <h3>Card Magic</h3>
+                                <p>Card magic is one of my favorite hobbies because it mixes skill, practice, and communication.</p>
+                            </article>
+                            <article class="glass-card">
+                                <h3>UN Global Goal</h3>
+                                <p>Quality Education. This website connects to education because it shows my learning journey in web development and how I build skills through practice.</p>
+                            </article>
+                        </div>
+                    </div>
 
-                            <div class="about-info-group">
-                                <h3 class="about-heading">GOALS</h3>
-                                <ul class="about-list">
-                                    <li>Improve my front-end coding skills</li>
-                                    <li>Build cleaner and more advanced websites</li>
-                                    <li>Learn more about AI workflows</li>
-                                    <li>Create interactive portfolio projects</li>
-                                </ul>
+                    <!-- Show More assignment details -->
+                    <div class="about-more">
+                        <button class="show-more-button" id="show-more-button" type="button" aria-expanded="false" aria-controls="about-extra-content">
+                            Show More
+                        </button>
+
+                        <div class="about-extra-content" id="about-extra-content">
+                            <div class="about-extra-grid">
+                                <article class="about-extra-card">
+                                    <h3>Design Thinking Process</h3>
+                                    <p><strong>Empathize:</strong> I thought about my audience, such as my teacher and classmates.</p>
+                                    <p><strong>Define:</strong> I wanted to make a website that introduces my identity and interests.</p>
+                                    <p><strong>Ideate:</strong> I planned sections like About, Images, Video, and Contact.</p>
+                                    <p><strong>Prototype:</strong> I first built a simple framework before adding content.</p>
+                                    <p><strong>Test:</strong> I tested layout, navigation, readability, and image placement.</p>
+                                </article>
+
+                                <article class="about-extra-card">
+                                    <h3>Accessibility Statement</h3>
+                                    <p>I tried to make this website easy to read and use. I used clear headings, readable fonts, strong color contrast, simple navigation, semantic HTML, and alt text for images.</p>
+                                </article>
+
+                                <article class="about-extra-card">
+                                    <h3>Behind the Curtain</h3>
+                                    <p><strong>HTML:</strong> I used semantic sections to organize the website.</p>
+                                    <p><strong>CSS:</strong> I used a pink cyberpunk style, grid layout, glow effects, and responsive design.</p>
+                                    <p><strong>JavaScript:</strong> I used JavaScript for navigation effects, the Show More toggle, and form validation.</p>
+                                    <p><strong>Challenge:</strong> The hardest part was balancing creative style with readability.</p>
+                                    <p><strong>Developer Tools:</strong> I used browser developer tools to test spacing, layout, and responsiveness.</p>
+                                    <p><strong>What I Learned:</strong> I learned how HTML, CSS, and JavaScript work together.</p>
+                                </article>
                             </div>
                         </div>
                     </div>
@@ -81,85 +147,285 @@
             </div>
         </section>
 
-
-        <section id="interests" class="section">
-            <div class="container">
-                <div class="panel big-frame reveal interests-panel">
-                    <h2 class="section-title">My Interests</h2>
-
-                    <div class="mini-grid three-col interests-grid">
-                        <div class="mini-box">Web Development</div>
-                        <div class="mini-box">AI and Technology</div>
-                        <div class="mini-box">Photography</div>
-                        <div class="mini-box">Basketball</div>
-                        <div class="mini-box">Cyberpunk and Y2K Style</div>
-                        <div class="mini-box">Creative Coding</div>
-                        <div class="mini-box">Video Editing</div>
-                        <div class="mini-box">Card Magic</div>
-                        <div class="mini-box">Livestreaming and communicating with people who share the same interests</div>
-                    </div>
-
-                    <div class="mini-grid two-col featured-grid">
-                        <div class="mini-box">Photography &amp; Visual Media</div>
-                        <div class="mini-box">Learning Front-End Development</div>
-                        <div class="mini-box">Interested in AI and Technology</div>
-                        <div class="mini-box">Card Magic &amp; Online Communities</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
+        <!-- Images -->
         <section id="images" class="section">
             <div class="container">
-                <div class="panel big-frame reveal">
-                    <h2 class="section-title">IMAGES</h2>
-                    <div class="mini-grid four-col">
-                        <div class="mini-box media-box">Image</div>
-                        <div class="mini-box media-box">Image</div>
-                        <div class="mini-box media-box">Image</div>
-                        <div class="mini-box media-box">Image</div>
+                <div class="section-shell reveal">
+                    <div class="section-heading">
+                        <p class="section-label">02 / IMAGES</p>
+                        <h2>Images</h2>
+                        <p class="section-subtitle">A visual gallery of my life, memories, and photography.</p>
+                    </div>
+
+                    <div class="gallery-subsection">
+                        <div class="gallery-subhead">
+                            <h3>My Photos</h3>
+                            <p>Photos about my life, friends, travel, school memories, and vehicles.</p>
+                        </div>
+
+                        <div class="gallery-layout photos-gallery">
+                            <div class="gallery-column">
+                                <figure class="gallery-piece gallery-large">
+                                    <div class="image-frame">
+                                        <img src="images/m1.jpg" alt="Ryan Liang with a friend after a drama show." loading="lazy">
+                                        <span>Image Placeholder</span>
+                                    </div>
+                                    <figcaption>
+                                        <strong>After Drama Show</strong>
+                                        <span>A casual moment after the drama show, capturing friendship and a memory from school life.</span>
+                                    </figcaption>
+                                </figure>
+
+                                <figure class="gallery-piece gallery-wide">
+                                    <div class="image-frame">
+                                        <img src="images/m3.jpg" alt="Ryan Liang with an electric scooter near the water in Suzhou." loading="lazy">
+                                        <span>Image Placeholder</span>
+                                    </div>
+                                    <figcaption>
+                                        <strong>Suzhou Ride</strong>
+                                        <span>A sunny riding moment in Suzhou with my electric scooter near the water.</span>
+                                    </figcaption>
+                                </figure>
+
+                                <article class="gallery-note-card">
+                                    <h4>Gallery Notes</h4>
+                                    <p>These photos record parts of my life, including school memories, travel moments, family, friends, and riding experiences.</p>
+                                    <p>Each image is not only a photo, but also a small memory from my personal journey.</p>
+                                </article>
+                            </div>
+
+                            <div class="gallery-column">
+                                <figure class="gallery-piece">
+                                    <div class="image-frame">
+                                        <img src="images/m2.jpg" alt="Ryan Liang during a trip to Qingzhou." loading="lazy">
+                                        <span>Image Placeholder</span>
+                                    </div>
+                                    <figcaption>
+                                        <strong>Qingzhou Trip</strong>
+                                        <span>A travel memory from Qingzhou, showing a quiet moment from my personal journey.</span>
+                                    </figcaption>
+                                </figure>
+
+                                <figure class="gallery-piece cousin-photo">
+                                    <div class="image-frame">
+                                        <img src="images/m4.jpg" alt="Ryan Liang taking a photo with his cousin." loading="lazy">
+                                        <span>Image Placeholder</span>
+                                    </div>
+                                    <figcaption>
+                                        <strong>With My Cousin</strong>
+                                        <span>A personal family moment with my cousin, showing an important part of my daily life.</span>
+                                    </figcaption>
+                                </figure>
+
+                                <figure class="gallery-piece gallery-wide">
+                                    <div class="image-frame">
+                                        <img src="images/m5.jpg" alt="Ryan Liang and classmates at the end of a drama show." loading="lazy">
+                                        <span>Image Placeholder</span>
+                                    </div>
+                                    <figcaption>
+                                        <strong>Drama Show Finale</strong>
+                                        <span>A group moment at the end of the drama show, recording teamwork, performance, and shared memories.</span>
+                                    </figcaption>
+                                </figure>
+
+                                <figure class="gallery-piece gallery-wide">
+                                    <div class="image-frame">
+                                        <img src="images/m6.jpg" alt="Ryan Liang and a friend riding electric scooters near the water in Suzhou." loading="lazy">
+                                        <span>Image Placeholder</span>
+                                    </div>
+                                    <figcaption>
+                                        <strong>Suzhou Ride Moment</strong>
+                                        <span>A riding memory in Suzhou.</span>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-subsection photography-section">
+                        <div class="gallery-subhead">
+                            <h3>My Photography</h3>
+                            <p>Travel photos and moments captured through my camera.</p>
+                        </div>
+
+                        <div class="travel-gallery-list">
+                            <article class="travel-gallery-group">
+                                <h4>Vancouver Trip</h4>
+                                <div class="travel-photo-grid">
+                                    <div class="travel-photo-card is-large">
+                                        <img src="images/images_vancouver1.jpg" alt="Vancouver travel photo by Ryan Liang" loading="lazy">
+                                    </div>
+                                    <div class="travel-photo-card">
+                                        <img src="images/images_vancouver2.jpg" alt="Vancouver travel photo by Ryan Liang" loading="lazy">
+                                    </div>
+                                    <div class="travel-photo-card">
+                                        <img src="images/images_vancouver3.jpg" alt="Vancouver travel photo by Ryan Liang" loading="lazy">
+                                    </div>
+                                    <div class="travel-photo-card is-wide">
+                                        <img src="images/images_vancouver4.jpg" alt="Vancouver travel photo by Ryan Liang" loading="lazy">
+                                    </div>
+                                    <div class="travel-photo-card">
+                                        <img src="images/images_vancouver5.jpg" alt="Vancouver travel photo by Ryan Liang" loading="lazy">
+                                    </div>
+                                    <div class="travel-photo-card">
+                                        <img src="images/images_vancouver6.jpg" alt="Vancouver travel photo by Ryan Liang" loading="lazy">
+                                    </div>
+                                    <div class="travel-photo-card is-tall">
+                                        <img src="images/images_vancouver7.jpg" alt="Vancouver travel photo by Ryan Liang" loading="lazy">
+                                    </div>
+                                    <div class="travel-photo-card">
+                                        <img src="images/images_vancouver8.jpg" alt="Vancouver travel photo by Ryan Liang" loading="lazy">
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="travel-gallery-group">
+                                <h4>Japan Trip</h4>
+                                <div class="travel-photo-grid">
+                                    <div class="travel-photo-card is-large">
+                                        <img src="images/images_japan1.jpg" alt="Japan travel photo by Ryan Liang" loading="lazy">
+                                    </div>
+                                    <div class="travel-photo-card">
+                                        <img src="images/images_japan2.jpg" alt="Japan travel photo by Ryan Liang" loading="lazy">
+                                    </div>
+                                    <div class="travel-photo-card">
+                                        <img src="images/images_japan3.jpg" alt="Japan travel photo by Ryan Liang" loading="lazy">
+                                    </div>
+                                    <div class="travel-photo-card is-wide">
+                                        <img src="images/images_japan4.jpg" alt="Japan travel photo by Ryan Liang" loading="lazy">
+                                    </div>
+                                    <div class="travel-photo-card">
+                                        <img src="images/images_japan5.jpg" alt="Japan travel photo by Ryan Liang" loading="lazy">
+                                    </div>
+                                    <div class="travel-photo-card">
+                                        <img src="images/images_japan6.jpg" alt="Japan travel photo by Ryan Liang" loading="lazy">
+                                    </div>
+                                    <div class="travel-photo-card is-tall">
+                                        <img src="images/images_japan7.jpg" alt="Japan travel photo by Ryan Liang" loading="lazy">
+                                    </div>
+                                    <div class="travel-photo-card">
+                                        <img src="images/images_japan8.jpg" alt="Japan travel photo by Ryan Liang" loading="lazy">
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="travel-gallery-group">
+                                <h4>Xinjiang Trip</h4>
+                                <div class="travel-photo-grid">
+                                    <div class="travel-photo-card is-large">
+                                        <img src="images/images_xinjiang1.jpg" alt="Xinjiang travel photo by Ryan Liang" loading="lazy">
+                                    </div>
+                                    <div class="travel-photo-card">
+                                        <img src="images/images_xinjiang2.jpg" alt="Xinjiang travel photo by Ryan Liang" loading="lazy">
+                                    </div>
+                                    <div class="travel-photo-card">
+                                        <img src="images/images_xinjiang3.jpg" alt="Xinjiang travel photo by Ryan Liang" loading="lazy">
+                                    </div>
+                                    <div class="travel-photo-card is-wide">
+                                        <img src="images/images_xinjiang4.jpg" alt="Xinjiang travel photo by Ryan Liang" loading="lazy">
+                                    </div>
+                                    <div class="travel-photo-card">
+                                        <img src="images/images_xinjiang5.jpg" alt="Xinjiang travel photo by Ryan Liang" loading="lazy">
+                                    </div>
+                                    <div class="travel-photo-card">
+                                        <img src="images/images_xinjiang6.jpg" alt="Xinjiang travel photo by Ryan Liang" loading="lazy">
+                                    </div>
+                                    <div class="travel-photo-card is-tall">
+                                        <img src="images/images_xinjiang7.jpg" alt="Xinjiang travel photo by Ryan Liang" loading="lazy">
+                                    </div>
+                                    <div class="travel-photo-card">
+                                        <img src="images/images_xinjiang8.jpg" alt="Xinjiang travel photo by Ryan Liang" loading="lazy">
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="videos" class="section">
+        <!-- Video -->
+        <section id="video" class="section">
             <div class="container">
-                <div class="panel big-frame reveal">
-                    <h2 class="section-title">VIDEOS</h2>
-                    <div class="mini-grid two-col">
-                        <div class="mini-box media-box">Video</div>
-                        <div class="mini-box media-box">Video</div>
+                <div class="section-shell reveal">
+                    <div class="section-heading">
+                        <p class="section-label">03 / VIDEO</p>
+                        <h2>Video</h2>
+                        <p class="section-subtitle">Two videos about me.</p>
+                    </div>
+
+                    <div class="video-grid">
+                        <article class="video-card">
+                            <div class="video-frame">
+                                <div class="play-orb" aria-hidden="true">Play</div>
+                                <video controls preload="metadata" aria-label="Future hobbies video by Ryan Liang">
+                                    <source src="videos/hobbies-video.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <h3>My Hobbies</h3>
+                            <p>This video introduces my three main hobbies.</p>
+                        </article>
+
+                        <article class="video-card">
+                            <div class="video-frame">
+                                <div class="play-orb" aria-hidden="true">Play</div>
+                                <video controls preload="metadata" aria-label="Future vehicles video by Ryan Liang">
+                                    <source src="videos/vehicles-video.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <h3>My Vehicles</h3>
+                            <p>This video introduces the vehicles that are important in my life.</p>
+                        </article>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="projects" class="section">
-            <div class="container">
-                <div class="panel big-frame reveal">
-                    <h2 class="section-title">PROJECTS</h2>
-                    <div class="mini-grid three-col">
-                        <div class="mini-box">Project</div>
-                        <div class="mini-box">Project</div>
-                        <div class="mini-box">Project</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
+        <!-- Contact -->
         <section id="contact" class="section">
             <div class="container">
-                <div class="panel big-frame reveal">
-                    <h2 class="section-title">CONTACT</h2>
-                    <div class="mini-grid two-col">
-                        <div class="mini-box">Title</div>
-                        <div class="mini-box">Text</div>
+                <div class="section-shell reveal">
+                    <div class="contact-layout">
+                        <div class="contact-copy">
+                            <p class="section-label">04 / CONTACT</p>
+                            <h2>Contact</h2>
+                            <p class="section-subtitle">Thank you for visiting my portfolio website.</p>
+                            <a class="email-link" href="mailto:ryanliang080403@gmail.com">ryanliang080403@gmail.com</a>
+                        </div>
+
+                        <form class="contact-form" id="contact-form" novalidate>
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your name">
+
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="your@email.com">
+
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Write your message here"></textarea>
+
+                            <button class="submit-button" type="submit">Send</button>
+                            <p class="form-message" id="form-message" aria-live="polite"></p>
+                        </form>
                     </div>
                 </div>
             </div>
         </section>
     </main>
+
+    <!-- Reusable image preview for the Images section -->
+    <div class="image-lightbox" id="image-lightbox" role="dialog" aria-modal="true" aria-hidden="true">
+        <button class="lightbox-close" type="button" aria-label="Close image preview">X</button>
+        <img class="lightbox-image" src="" alt="">
+    </div>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>Ryan Liang - Personal Portfolio</p>
+            <a href="#home">Back to Top</a>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
